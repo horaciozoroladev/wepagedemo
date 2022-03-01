@@ -4,47 +4,64 @@ const MENU = [
     {
         id: 0,
         page: 'Inicio',
-        redirectTo: '',
+        redirectTo: 'index.html',
         action: '',
         subPages: []
     },
     {
         id: 1,
         page: 'Productos',
-        redirectTo: '',
+        redirectTo: '#',
         action: '',
         subPages: [
             {
                 id: 0,
                 page: 'Cocteles',
-                redirectTo: '',
+                redirectTo: '404.html',
                 action: ''
             },
             {
                 id: 1,
                 page: 'Cervezas',
-                redirectTo: '',
+                redirectTo: '404.html',
                 action: ''
             },
             {
                 id: 2,
                 page: 'Licores y destilados',
-                redirectTo: '',
+                redirectTo: '404.html',
                 action: ''
             },
             {
                 id: 3,
                 page: 'Vinos y espumosos',
-                redirectTo: '',
+                redirectTo: '404.html',
                 action: ''
             },
         ]
+    }
+]
+
+const MENU_2 = [
+    {
+        id: 0,
+        page: 'Contáctanos',
+        redirectTo: '404.html',
+        action: '',
+        subPages: []
+    },
+    {
+        id: 1,
+        page: 'Registrarse',
+        redirectTo: 'registro.html',
+        action: '',
+        subPages: []
     },
     {
         id: 2,
         page: 'Iniciar sesion',
-        redirectTo: '',
-        action: 'showIniciarSesion();',
+        redirectTo: 'iniciar-sesion.html',
+        action: '',
         subPages: []
     }
 ]

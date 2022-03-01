@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -40,9 +41,28 @@
             </div>
         </nav>
     </header>
-    
+
+
     <section>
-        <img class="mx-auto img-wide" src="./assets/images/Dos-Hombres-Mezcal.jpg" alt="Dos hombres mezcal">
+        <div class="container">
+            <div class="row mt-2 pt-5 mb-2 pb-5" id="form-reestablecer">
+                <div class="mx-auto col-lg-4 col-md-4 col-sm-9">
+                    <form class="needs-validation" novalidate>
+                        <h4><strong>Reestablecer contraseña</strong></h4>
+
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="reestablecer_email"
+                                placeholder="name@example.com" required onkeyup="onKeyUpEmailEvent()">
+                            <label for="reestablecer_email">Ingresa el correo electrónico que registraste</label>
+                            <div class="invalid-feedback">Correo electrónico inválido</div>
+                        </div>
+
+                        <button id="submit_reestablecer" type="submit" class="btn-wide float-end mt-3 btn btn-primary" disabled
+                            >Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer class="fixed-bottom bg-dark">
@@ -51,10 +71,9 @@
 
 
 
-
-
     <script src="./assets/js/utils.js"></script>
     <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/validations.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
