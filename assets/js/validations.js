@@ -18,9 +18,9 @@ const onKeyUpNombreSignInEvent = () => {
     const regex = new RegExp(/[a-z]/g);
 
     if (!regex.exec(value)) {
-        $('#signin_nombres_v').show();
+        showOrHide(['signin_nombres_v'], STYLES.visibility.visible);
     } else {
-        $('#signin_nombres_v').hide();
+        showOrHide(['signin_nombres_v'], STYLES.visibility.hidden);
     }
 }
 
@@ -29,9 +29,9 @@ const onKeyUpApellidoSignInEvent = () => {
     const regex = new RegExp(/[a-z]/g);
 
     if (!regex.exec(value)) {
-        $('#signin_apellidos_v').show();
+        showOrHide(['signin_apellidos_v'], STYLES.visibility.visible);
     } else {
-        $('#signin_apellidos_v').hide();
+        showOrHide(['signin_apellidos_v'], STYLES.visibility.hidden);
     }
 }
 
@@ -40,11 +40,9 @@ const onKeyUpEmailSignInEvent = () => {
     const regex = new RegExp(/^([\da-z_\.-]+)@([\dalcostore\.-]+)\.([a-z\.]{2,6})$/);
 
     if (!regex.exec(value)) {
-        $('#signin_email_v').show();
-
+        showOrHide(['signin_email'], STYLES.visibility.visible);
     } else {
-        $('#signin_email_v').hide();
-
+        showOrHide(['signin_email'], STYLES.visibility.hidden);
     }
 }
 
@@ -53,9 +51,9 @@ const onKeyUpClaveSignInEvent = () => {
     const regex = new RegExp(/^[a-z0-9]+$/i);
 
     if (!regex.exec(value)) {
-        $('#signin_pwd_v').show();
+        showOrHide(['signin_pwd'], STYLES.visibility.visible);
     } else {
-        $('#signin_pwd_v').hide();
+        showOrHide(['signin_pwd'], STYLES.visibility.hidden);
     }
 }
 
@@ -65,9 +63,9 @@ const onKeyUpEmailLogInInEvent = () => {
     const regex = new RegExp(/^([\da-z_\.-]+)@([\dalcostore\.-]+)\.([a-z\.]{2,6})$/);
 
     if (!regex.exec(value)) {
-        $('#email_v').show();
+        showOrHide(['email'], STYLES.visibility.visible);
     } else {
-        $('#email_v').hide();
+        showOrHide(['email'], STYLES.visibility.hidden);
     }
 }
 
@@ -76,9 +74,9 @@ const onKeyUpClaveLogInInEvent = () => {
     const regex = new RegExp(/^[a-z0-9]+$/i);
 
     if (!regex.exec(value)) {
-        $('#pwd_v').show();
+        showOrHide(['pwd'], STYLES.visibility.visible);
     } else {
-        $('#pwd_v').hide();
+        showOrHide(['pwd'], STYLES.visibility.hidden);
     }
 }
 

@@ -65,3 +65,45 @@ const MENU_2 = [
         subPages: []
     }
 ]
+
+const STYLES = {
+    visibility: {
+        _self: `visibility`,
+        hidden: `hidden`,
+        visible: `visible`
+    }
+}
+
+
+// Methods
+
+const showOrHide = (arr, option) => {
+    const visibilityHidden = `${STYLES.visibility._self}: ${STYLES.visibility.hidden}`;
+    const visibilityVisible = `${STYLES.visibility._self}: ${STYLES.visibility.visible}`;
+    
+    if (arr.length == 1) {
+        switch (option) {
+            case STYLES.visibility.hidden: {
+                document.getElementById(arr[0]).style = visibilityHidden;
+                break;
+            }
+            case STYLES.visibility.visible: {
+                document.getElementById(arr[0]).style = visibilityVisible;
+                break;
+            }
+        }
+    } else {
+        arr.forEach(element => {
+            switch (option) {
+                case STYLES.visibility.hidden: {
+                    document.getElementById(element).style = visibilityHidden;
+                    break;
+                }
+                case STYLES.visibility.visible: {
+                    document.getElementById(element).style = visibilityVisible;
+                    break;
+                }
+            }
+        });
+    }
+}

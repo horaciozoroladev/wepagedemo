@@ -1,17 +1,27 @@
-$(document).ready(function () {
-
+window.onload = () => {
     loadingDefaults();
 
-    // sign in
-    $('#signin_nombres_v').hide();
-    $('#signin_apellidos_v').hide();
-    $('#signin_email_v').hide();
-    $('#signin_pwd_v').hide();
+    const onloadHideElements = [
+        // sign in
+        'signin_nombres_v',
+        'signin_apellidos_v',
+        'signin_nombres_v',
+        'signin_email_v',
+        'signin_pwd_v',
+        // log in
+        'email_v',
+        'pwd_v'
+    ];
+    changeImg404();
+    showOrHide(onloadHideElements, STYLES.visibility.hidden);
+}
 
-    // login
-    $('#email_v').hide();
-    $('#pwd_v').hide();
-});
+const changeImg404 = () => {
+
+    setTimeout(() => {
+        document.getElementById('img404').src = "./assets/images/broken-bottle.jpg";
+    }, 1500);
+}
 
 const loadingDefaults = () => {
 
@@ -20,7 +30,7 @@ const loadingDefaults = () => {
 
     renderMenu();
 
-    $('#form-login').hide();
+    document.getElementById('form-login').style = `visibility: hidden;`;
 
 }
 
@@ -86,25 +96,25 @@ const renderMenu = () => {
 
 const showIniciarSesion = () => {
 
-    $('#form-login').show();
+    showOrHide(['form-login'], STYLES.visibility.visible);
 
 }
 
 const hideIniciarSesion = () => {
 
-    $('#form-login').hide();
+    showOrHide(['form-login'], STYLES.visibility.hidden);
 
 }
 
 const showCrearCuenta = () => {
 
-    $('#form-signin').show();
+    showOrHide(['form-signin'], STYLES.visibility.visible);
 
 }
 
 const hideCrearCuenta = () => {
 
-    $('#form-signin').hide();
+    showOrHide(['form-signin'], STYLES.visibility.hidden);
 
 }
 
@@ -129,7 +139,7 @@ const onClickCrearCuenta = () => {
 const onClickIniciarSesion = () => {
     onKeyUpEmailLogInInEvent();
     onKeyUpClaveLogInInEvent();
-    
+
     const cuenta = {
         email: document.getElementById('email').value || '',
         clave: btoa(document.getElementById('pwd').value || '')
