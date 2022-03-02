@@ -17,25 +17,29 @@ const MENU = [
             {
                 id: 0,
                 page: 'Cocteles',
-                redirectTo: '404.html',
+                redirectTo: 'productos.html',
+                stringQuery: 'cocktail',
                 action: ''
             },
             {
                 id: 1,
                 page: 'Cervezas',
-                redirectTo: '404.html',
+                redirectTo: 'productos.html',
+                stringQuery: 'beer',
                 action: ''
             },
             {
                 id: 2,
                 page: 'Licores y destilados',
-                redirectTo: '404.html',
+                redirectTo: 'productos.html',
+                stringQuery: 'tequila',
                 action: ''
             },
             {
                 id: 3,
                 page: 'Vinos y espumosos',
-                redirectTo: '404.html',
+                redirectTo: 'productos.html',
+                stringQuery: 'wine',
                 action: ''
             },
         ]
@@ -80,7 +84,7 @@ const STYLES = {
 const showOrHide = (arr, option) => {
     const visibilityHidden = `${STYLES.visibility._self}: ${STYLES.visibility.hidden}`;
     const visibilityVisible = `${STYLES.visibility._self}: ${STYLES.visibility.visible}`;
-    
+
     if (arr.length == 1) {
         switch (option) {
             case STYLES.visibility.hidden: {

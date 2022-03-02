@@ -12,7 +12,7 @@ window.onload = () => {
         'email_v',
         'pwd_v'
     ];
-    changeImg404();
+    // changeImg404();
     showOrHide(onloadHideElements, STYLES.visibility.hidden);
 }
 
@@ -29,8 +29,6 @@ const loadingDefaults = () => {
     document.getElementById('title').innerText = TITLE;
 
     renderMenu();
-
-    document.getElementById('form-login').style = `visibility: hidden;`;
 
 }
 
@@ -49,7 +47,7 @@ const renderMenu = () => {
 
                 m.subPages.forEach(sP => {
                     menuSubItems += `
-                    <li><a class="dropdown-item" href="${sP.redirectTo}">${sP.page}</a></li>
+                    <li><a class="dropdown-item" href="${sP.redirectTo}?sq=${sP.stringQuery}">${sP.page}</a></li>
                     `;
                 })
                 menuItems += `
@@ -148,5 +146,3 @@ const onClickIniciarSesion = () => {
     console.table(cuenta ?? {});
     alert(JSON.stringify(cuenta ?? {}));
 }
-
-// contemplar https://www.thecocktaildb.com/
