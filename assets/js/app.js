@@ -1,19 +1,5 @@
 window.onload = () => {
     loadingDefaults();
-
-    const onloadHideElements = [
-        // sign in
-        'signin_nombres_v',
-        'signin_apellidos_v',
-        'signin_nombres_v',
-        'signin_email_v',
-        'signin_pwd_v',
-        // log in
-        'email_v',
-        'pwd_v'
-    ];
-    // changeImg404();
-    showOrHide(onloadHideElements, STYLES.visibility.hidden);
 }
 
 const changeImg404 = () => {
@@ -89,30 +75,6 @@ const renderMenu = () => {
 
     document.getElementById('navbar-nav').innerHTML = menuItems;
     document.getElementById('navbar-nav-2').innerHTML = menuItems2;
-
-}
-
-const showIniciarSesion = () => {
-
-    showOrHide(['form-login'], STYLES.visibility.visible);
-
-}
-
-const hideIniciarSesion = () => {
-
-    showOrHide(['form-login'], STYLES.visibility.hidden);
-
-}
-
-const showCrearCuenta = () => {
-
-    showOrHide(['form-signin'], STYLES.visibility.visible);
-
-}
-
-const hideCrearCuenta = () => {
-
-    showOrHide(['form-signin'], STYLES.visibility.hidden);
 
 }
 

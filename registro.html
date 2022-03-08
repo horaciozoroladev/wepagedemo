@@ -49,27 +49,32 @@
                     <form class="" novalidate>
                         <h4><strong>Crea tu cuenta</strong></h4>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="signin_nombres" placeholder="nombre" onkeyup="onKeyUpNombreSignInEvent()">
+                            <input type="text" class="form-control" id="signin_nombres" placeholder="nombre"
+                                onkeyup="onKeyUpNombreSignInEvent()">
                             <label for="signin_nombres">Nombre (s)</label>
                             <div id="signin_nombres_v" class="text-danger">Invalido</div>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="signin_apellidos" placeholder="apellido" onkeyup="onKeyUpApellidoSignInEvent()">
+                            <input type="text" class="form-control" id="signin_apellidos" placeholder="apellido"
+                                onkeyup="onKeyUpApellidoSignInEvent()">
                             <label for="signin_apellidos">Apellido (s)</label>
                             <div id="signin_apellidos_v" class="text-danger">Invalido</div>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="signin_email" placeholder="name@example.com" onkeyup="onKeyUpEmailSignInEvent()">
+                            <input type="email" class="form-control" id="signin_email" placeholder="name@example.com"
+                                onkeyup="onKeyUpEmailSignInEvent()">
                             <label for="signin_email">Correo electrónico</label>
                             <div id="signin_email_v" class="text-danger">Invalido</div>
                         </div>
                         <div class="form-floating">
-                            <input type="password" class="form-control" id="signin_pwd" placeholder="Contraseña" onkeyup="onKeyUpClaveSignInEvent()">
+                            <input type="password" class="form-control" id="signin_pwd" placeholder="Contraseña"
+                                onkeyup="onKeyUpClaveSignInEvent()">
                             <label for="signin_pwd">Contraseña (8 caracteres mínimo)</label>
                             <div id="signin_pwd_v" class="text-danger">Invalido</div>
                         </div>
 
-                        <button type="button" class="btn-wide float-end mt-3 btn btn-primary" onclick="onClickCrearCuenta()">Crear cuenta</button>
+                        <button type="button" class="btn-wide float-end mt-3 btn btn-primary"
+                            onclick="onClickCrearCuenta()">Crear cuenta</button>
                     </form>
                 </div>
                 <br><br><br>
@@ -91,6 +96,17 @@
 
     <script src="./assets/js/utils.js"></script>
     <script src="./assets/js/app.js"></script>
+    <script>
+        const onloadHideElementsRegistro = [
+            'signin_nombres_v',
+            'signin_apellidos_v',
+            'signin_nombres_v',
+            'signin_email_v',
+            'signin_pwd_v'
+        ];
+        // changeImg404();
+        showOrHide(onloadHideElementsRegistro, STYLES.visibility.hidden);
+    </script>
     <script src="./assets/js/validations.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

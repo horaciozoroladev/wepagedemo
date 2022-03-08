@@ -44,9 +44,6 @@
     <div class="container">
         <!-- inicio login -->
         <div class="row mt-2 pt-5 mb-2 pb-5">
-            <!-- <div class="form-floating mb-3">
-                <i class="float-end bi bi-x-lg" onclick="hideIniciarSesion()" style="cursor: pointer"></i>
-            </div> -->
             <div class="mx-auto col-lg-4 col-md-4 col-sm-9">
                 <form class="">
                     <h4><strong>Inicia sesión</strong></h4>
@@ -80,6 +77,14 @@
 
     <script src="./assets/js/utils.js"></script>
     <script src="./assets/js/app.js"></script>
+    <script>
+         const onloadHideElementsInicioSesion = [
+            'email_v',
+            'pwd_v'
+        ];
+        // changeImg404();
+        showOrHide(onloadHideElementsInicioSesion, STYLES.visibility.hidden);
+    </script>
     <script src="./assets/js/validations.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

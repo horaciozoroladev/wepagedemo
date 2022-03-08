@@ -63,9 +63,9 @@ const onKeyUpEmailLogInInEvent = () => {
     const regex = new RegExp(/^([\da-z_\.-]+)@([\dalcostore\.-]+)\.([a-z\.]{2,6})$/);
 
     if (!regex.exec(value)) {
-        showOrHide(['email'], STYLES.visibility.visible);
+        showOrHide(['email_v'], STYLES.visibility.visible);
     } else {
-        showOrHide(['email'], STYLES.visibility.hidden);
+        showOrHide(['email_v'], STYLES.visibility.hidden);
     }
 }
 
@@ -74,9 +74,9 @@ const onKeyUpClaveLogInInEvent = () => {
     const regex = new RegExp(/^[a-z0-9]+$/i);
 
     if (!regex.exec(value)) {
-        showOrHide(['pwd'], STYLES.visibility.visible);
+        showOrHide(['pwd_v'], STYLES.visibility.visible);
     } else {
-        showOrHide(['pwd'], STYLES.visibility.hidden);
+        showOrHide(['pwd_v'], STYLES.visibility.hidden);
     }
 }
 
