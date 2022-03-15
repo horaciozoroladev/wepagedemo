@@ -108,3 +108,35 @@ const onClickIniciarSesion = () => {
     console.table(cuenta ?? {});
     alert(JSON.stringify(cuenta ?? {}));
 }
+
+let arrayIdsDrinks = [];
+const productoVerMas = (idDrink) => {
+    arrayIdsDrinks.push(idDrink);
+    arrayIdsDrinks = [...new Set(arrayIdsDrinks)]
+    console.log(arrayIdsDrinks)
+
+    const drinks = JSON.parse(sessionStorage.drinks ?? [{}]);
+    const drink = drinks.filter(drink => drink.idDrink == idDrink);
+    const producto = document.getElementById(`card-content-${idDrink}`);
+
+    let productoInfo = '';
+    if (arrayIdsDrinks.length > 1) {
+        document.getElementById(`card-content-${arrayIdsDrinks[0]}`).innerHTML = ``;
+        arrayIdsDrinks.shift();
+        
+    }
+
+
+    drink.filter(info => {
+        productoInfo += `
+        <p><b>Instructions: </b> ${info.strInstructions}</p>
+        `;
+    });
+
+    producto.innerHTML = productoInfo;
+    // if (arrayIdsDrinks.includes(idDrink)) {
+    //     console.log(idDrink)
+    //     console.log('Lo incluye')
+    //     document.getElementById(`card-content-${arrayIdsDrinks[0]}`).innerHTML = ``;
+    // }     
+}

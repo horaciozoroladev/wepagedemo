@@ -8,6 +8,10 @@
     width: 100%;
 }
 
+.showMore, .card {
+    cursor: pointer;
+}
+
 /* loader spinner bubbles */
 .spinner {
     margin: 100px auto 0;

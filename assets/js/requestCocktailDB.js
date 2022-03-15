@@ -16,13 +16,18 @@ MENU.filter(item => {
 fetch(url, { method: `GET` })
     .then(res => res.json())
     .then(async (data) => {
+        sessionStorage.setItem('drinks', JSON.stringify(data.drinks));
         await data.drinks.forEach((drink) => {
             drinkX += `
-            <div class="card col-sm-12 col-md-6 col-lg-6 mb-4 me-4" style="width: 18rem;">
+            <div class="card col-sm-12 col-md-6 col-lg-6 mb-4 me-4" style="width: 18rem;" onclick="productoVerMas(${drink.idDrink})">
             <img src="${drink.strDrinkThumb}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${drink.strDrink}</h5>
                 <p class="card-text"><strong>Category: </strong>${drink.strCategory}</p>
+                
+               <!-- <i id="showMore-${drink.idDrink}" class="showMore d-flex justify-content-center text-info bi bi-arrow-bar-down" ></i> -->
+
+                <div id="card-content-${drink.idDrink}" class="pt-2"></div>
             </div>
             </div>
             `;
